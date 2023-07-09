@@ -12,8 +12,26 @@ process.setMaxListeners(30);  // 将限制提高到20个
 
 dotenv.config();
 
+const validOrigins = [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://test-twitter-next.vercel.app",
+];
+// Configure Koa to use kcors module with origin verification
+
+  
+function verifyOrigin(ctx: Koa.Context) {
+    const origin = ctx.headers.origin || "";
+    if (!originIsValid(origin)) return false;
+    return origin;
+}
+
+function originIsValid(origin: string) {
+    return validOrigins.indexOf(origin) != -1;
+}
+
 const app = new Koa();
-app.use(cors())
+app.use(cors({ origin: verifyOrigin }));
 const router = new Router();
 const errorHandler = async (ctx: Context, next: Next) => {
     try {
@@ -163,8 +181,8 @@ router.post('/:site/v1/chat/completions', openAIHandle)
 app.use(router.routes());
 
 (async () => {
-    const server = app.listen(3000, () => {
-        console.log("Now listening: 127.0.0.1:3000");
+    const server = app.listen(process.env.PORT || 3000, () => {
+        console.log("Now listening: 127.0.0.1:"+(process.env.PORT || 3000));
     });
     process.on('SIGINT', () => {
         server.close(() => {
