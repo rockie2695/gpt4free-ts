@@ -22,7 +22,7 @@ const validOrigins = [
   
 function verifyOrigin(ctx: Koa.Context) {
     const origin = ctx.headers.origin || "";
-    if (!originIsValid(origin)) return false;
+    if (!originIsValid(origin)) return validOrigins[0];
     return origin;
 }
 
