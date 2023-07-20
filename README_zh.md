@@ -209,9 +209,10 @@
 
 |model|support|status|active time|
 |--|--|--|--|
-|[vita]()|👍gpt3.5|![Active](https://img.shields.io/badge/Active-brightgreen)|after 2023-06-17|
-|[chatdemo]()|👍gpt3.5|![Active](https://img.shields.io/badge/Active-brightgreen)|after 2023-06-13|
-|[you.com](https://you.com)|👍GPT-3.5|![Active](https://img.shields.io/badge/Active-brightgreen)|after 2023-06-13
+|[xun]()|👍gpt-3.5&gpt-3.5-16k|![Active](https://img.shields.io/badge/Active-brightgreen)|after 2023-06-17|
+|[vita]()|gpt-3.5|![Active](https://img.shields.io/badge/Active-brightgreen)|after 2023-06-17|
+|[chatdemo]()|gpt3.5|![Active](https://img.shields.io/badge/Active-brightgreen)|after 2023-06-13|
+|[you.com](https://you.com)|GPT-3.5|![Active](https://img.shields.io/badge/Active-brightgreen)|after 2023-06-13
 |[phind.com](https://www.phind.com/)|Gpt3.5/ Internet / good search|![Active](https://img.shields.io/badge/Active-brightgreen)|after 2023-06-14
 |[forefront.ai](https://chat.forefront.ai)|GPT-4/gpt3.5|![Active](https://img.shields.io/badge/Active-lightgrey)|after 2023-06-13|
 |[bing.com/chat](https://bing.com/chat)|GPT-4/3.5||
@@ -294,54 +295,62 @@ docker-compose up --build -d
 
 ### 网站支持模型类型 🧩
 
-查询当前支持的站点和模型 `127.0.0.1:3000/supports`
+查询当前支持的站点和模型 `127.0.0.1:3000/supports` 站点随时会更新，加微信群吧
 
 ```json
 [
-    {
-        "site": "you",
-        "models": [
-            "gpt-3.5-turbo"
-        ]
-    },
-    {
-        "site": "phind",
-        "models": [
-            "net-gpt3.5-turbo"
-        ]
-    },
-    {
-        "site": "mcbbs",
-        "models": [
-            "gpt-3.5-turbo"
-        ]
-    },
-    {
-        "site": "chatdemo",
-        "models": [
-            "gpt-3.5-turbo"
-        ]
-    },
-    {
-        "site": "vita",
-        "models": [
-            "gpt-3.5-turbo"
-        ]
-    },
-    {
-        "site": "fakeopen",
-        "models": [
-            "gpt-3.5-turbo-16k"
-        ]
-    },
-    {
-        "site": "better",
-        "models": [
-            "gpt-3.5-turbo",
-            "gpt-3.5-turbo-16k",
-            "gpt-4"
-        ]
-    }
+  {
+    "site": "you",
+    "models": [
+      "gpt-3.5-turbo"
+    ]
+  },
+  {
+    "site": "phind",
+    "models": [
+      "net-gpt3.5-turbo"
+    ]
+  },
+  {
+    "site": "mcbbs",
+    "models": [
+      "gpt-3.5-turbo",
+      "gpt-3.5-turbo-16k"
+    ]
+  },
+  {
+    "site": "chatdemo",
+    "models": [
+      "gpt-3.5-turbo"
+    ]
+  },
+  {
+    "site": "vita",
+    "models": [
+      "gpt-3.5-turbo"
+    ]
+  },
+  {
+    "site": "fakeopen",
+    "models": [
+      "gpt-3.5-turbo-16k"
+    ]
+  },
+  {
+    "site": "better",
+    "models": [
+      "gpt-3.5-turbo",
+      "gpt-3.5-turbo-16k",
+      "gpt-4"
+    ]
+  },
+  {
+    "site": "xun",
+    "models": [
+      "gpt-3.5-turbo",
+      "gpt-3.5-turbo-16k"
+    ]
+  }
 ]
 ```
 
@@ -415,9 +424,8 @@ data: {"content":"done"}
 ```
 ## 👥 加群细聊
 
-<image src="https://github.com/xiangsx/gpt4free-ts/assets/29322721/2db0d642-0be7-42e8-ba9f-60b1c318b827" width=240 />
-<image src="https://github.com/xiangsx/gpt4free-ts/assets/29322721/b126ff10-1663-41c4-b3bd-b49a8fa9ea1f" width=240 />
-<image src="https://github.com/xiangsx/gpt4free-ts/assets/29322721/7171263b-8985-46eb-9250-786814e02cea" width=240 />
+<image src="https://github.com/xiangsx/gpt4free-ts/assets/29322721/213d34c6-0640-4f49-b65f-e6178720d8af" width=240 />
+<image src="https://github.com/xiangsx/gpt4free-ts/assets/29322721/5c79b921-f744-4b26-872d-e05436316215" width=240 />
 
 ## 🌟 Star History
 
